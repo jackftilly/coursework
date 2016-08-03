@@ -15,3 +15,18 @@
   </tr>
 
 </table>
+<table>
+  <tr>
+    <th>Cat ID</th>
+    <th>Start date</th>
+    <th>End Date</th>
+  </tr>
+  <% @cat.cat_rental_requests.each do |crr| %>
+    <tr>
+      <td><%= crr.id %></td>
+      <td><%= crr.start_date %></td>
+      <td><%= crr.end_date %></td>
+    </tr>
+  <% end %>
+
+</table>

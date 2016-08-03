@@ -5,6 +5,7 @@ class CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    # @requests = CatRentalRequest.find(params[:id])
   end
 
   def new
