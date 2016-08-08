@@ -1,1 +1,8 @@
-<h>Your Goals!</h>
+<h>All Goals!</h>
+<% @goals.each do |goal| %>
+  <% unless goal.private? %>
+    <a href="/goals/<%= goal.id %>"><%= goal.body %></a>
+  <% end %>
+<% end %>
+
+<%= link_to "Add Goal", new_goal_url %>

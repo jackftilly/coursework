@@ -20,7 +20,7 @@ feature "the signup process" do
     end
 
     scenario "redirects to goals index" do
-      expect(page).to have_content('Your Goals!')
+      expect(page).to have_content('All Goals!')
     end
   end
 
