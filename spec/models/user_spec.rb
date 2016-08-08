@@ -1,11 +1,21 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string           not null
+#  session_token   :string           not null
+#  password_digest :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
   subject(:user) do
-    FactoryGirl.build(:user,
-      username: 'test',
-      password: "password")
+    FactoryGirl.create(:user)
   end
   it { should validate_presence_of(:username)}
   it {should validate_presence_of(:password_digest)}
@@ -28,7 +38,7 @@ RSpec.describe User, type: :model do
   describe "::find_by_credentials" do
     before { user.save }
     it "correctly returns user if found" do
-      found = User.find_by_credentials("test", "password")
+      found = User.find_by_credentials(user.username, "password")
       expect(found).to eq(user)
     end
 
