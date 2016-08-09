@@ -1,2 +1,7 @@
 <h1>GOAL: <%= @goal.body %> </h1>
 <h2>USERNAME: <%= @goal.user.username %> </h2>
+<% @comments.each do |comment| %>
+  <%= comment.body %>
+  <%= comment.user.username %>
+<% end %>
+<%= render "comments/comment", comment: @goal %>
