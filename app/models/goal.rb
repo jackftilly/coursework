@@ -24,5 +24,7 @@ class Goal < ActiveRecord::Base
     self.complete
   end
 
+  has_many :comments, as: :commentable
+
 
 end

@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :goals
-  has_many :comments
+  has_many :comments, as: :commentable
 
   attr_reader :password
   after_initialize :generate_session_token
