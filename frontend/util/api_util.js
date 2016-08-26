@@ -13,3 +13,11 @@ export function fetchPokemon(success, pokemonId) {
     success
   });
 }
+
+export function fetchToy(success, toyId) {
+  $.ajax({
+    method: "GET",
+    url:`api/toys/${toyId}`,
+    success
+  });
+}
