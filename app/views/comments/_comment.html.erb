@@ -1,0 +1,7 @@
+<form action="/comments" method="POST">
+
+    <textarea name="comment[body]" id="" cols="30" rows="10"></textarea>
+  <input type="hidden" name="comment[commentable_type]" value="<%= comment.class %>">
+  <input type="hidden" name="comment[commentable_id]" value="<%= comment.id %>">
+    <input type="submit" value="Add Comment">
+</form>
