@@ -1,0 +1,34 @@
+{
+<<<<<<< HEAD
+  "name": "w7d2",
+  "version": "1.0.0",
+  "description": "",
+=======
+  "name": "redux_todo",
+  "version": "1.0.0",
+  "description": "== README",
+>>>>>>> old_i/master
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+<<<<<<< HEAD
+    "jquery": "^3.1.0",
+=======
+>>>>>>> old_i/master
+    "lodash": "^4.15.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "webpack": "^1.13.2"
+  }
+}

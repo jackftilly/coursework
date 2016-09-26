@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<<<<<<< HEAD
+  <title>Motivator</title>
+=======
+  <title>ReduxTodo</title>
+>>>>>>> old_i/master
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<<<<<<< HEAD
+
+  <% flash[:errors].try(:each) do |error| %>
+    <%= error %>
+  <% end %>
+
+
+<% if current_user %>
+  <%= current_user.username %>
+  <%= button_to 'Log Out', session_url(current_user), method: :delete %>
+<% else %>
+  <%= link_to 'Login', new_session_url %>
+  <%= link_to 'Sign Up', new_user_url %>
+<% end %>
+
+=======
+>>>>>>> old_i/master
+<%= yield %>
+
+</body>
+</html>
