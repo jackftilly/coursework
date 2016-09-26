@@ -1,0 +1,30 @@
+
+<form action="/cats/<%=@cat.id%> " method="POST">
+  <input type="hidden" name="_method" value="<%="PATCH" unless @cat.name.nil? %>">
+  <label>
+    Name:
+    <input type="text" name="cat[name]" value="<%= @cat.name %>">
+    </input>
+  </label>
+  <label for="sex">Sex:</label>
+  M<input type="radio" name="cat[sex]" value="M" <%= @cat.sex == "M" ? "checked" : "false" %>>
+  F<input type="radio" name="cat[sex]" value="F" <%= @cat.sex == "F" ? "checked" : "false" %>>
+  <label for="color">
+    <select id="color" name="cat[color]" value=" <%= @cat.color %>">
+      <option disabled="true">Select Color</option>
+      <option <%= "selected" if @cat.color == "ginger"%> value="ginger">Ginger</option>
+      <option <%= "selected" if @cat.color == "black"%> value="black">Black</option>
+      <option <%= "selected" if @cat.color == "white"%> value="white">White</option>
+    </select>
+  </label>
+
+  <label for="date">Date:</label>
+    <input type="date" name="cat[birthdate]" value="<%= @cat.birthdate %>">
+
+  <label for="description">Description:</label>
+    <textarea id="description" name="cat[description]" cols=20 rows=3>
+      <%= @cat.description %>
+    </textarea>
+
+    <input type="submit" value="Submit cat">
+</form>
